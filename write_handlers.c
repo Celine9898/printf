@@ -24,8 +24,8 @@ int handle_write_char(char c, char buffer[],
 	if (flags & F_ZERO)
 		padd = '0';
 
-	buffer[i++] = c
-	buffer[i] = '\0'
+	buffer[i++] = c;
+	buffer[i] = '\0';
 
 	if (width > 1)
 	{
@@ -68,7 +68,7 @@ int write_number(int is_negative, int ind, char buffer[],
 	UNUSED(size);
 
 	if ((flags & F_ZERO) && !(flags & F_MINUS))
-		padd = 0';
+		padd = '0';
 
 	if (is_negative)
 		extra_ch = '-';
@@ -229,7 +229,7 @@ int write_pointer(char buffer[], int ind, int length,
 			buffer[--ind] = '0';
 			if (extra_c)
 				buffer[--ind] = extra_c;
-			return (write(1, &buffer[ind], length) + write(1, &buffer[3], i - 3))
+			return (write(1, &buffer[ind], length) + write(1, &buffer[3], i - 3));
 		}
 		else if (!(flags & F_MINUS) && padd == ' ')/* extra char to left of buffer */
 		{
